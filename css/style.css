@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -10,100 +10,146 @@
 
 /* common style */
 
-.title-font{
+.title-font {
   font-family: "Noto Serif", serif;
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: 700;
 }
 
-.primary-text{
-font-size: 22px;
-font-weight: 600;
-color: rgba(0, 0, 0, 0.5);
-font-family: "Inter", sans-serif;
+.primary-text {
+  font-size: 1.35rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Inter", sans-serif;
 }
 
-.primary-color{
+.primary-color {
   color: #E95A08;
 }
 
+body {
+  background: rgb(245, 248, 255);
+}
+
 /* header style */
-header{
+header {
   max-width: 1140px;
   margin: auto;
 }
 
-nav{
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
 }
 
-nav a{
-text-decoration: none;
-font-size: 22px;
+nav a {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.5);
   font-family: "Inter", sans-serif;
 }
 
-nav ul li:first-child a{
-  font-weight: bold;
-  color: black;
-}
-nav ul li:last-child a{
+nav ul li:first-child a {
+  font-weight: 600;
   color: black;
 }
 
-nav ul{
+nav ul li:last-child a {
+  color: black;
+}
+
+nav ul {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 48px;
 }
 
-.banner{
-display: flex;
-align-items: end;
-justify-content: space-between;
-margin-top: 120px
+.banner {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 120px;
 }
-.banner-left{
-  max-width: 500px;
+
+.banner-left {
+  max-width: 562px;
   text-align: left;
 }
 
-.banner-left h2{
+.banner-left h2 {
   font-size: 62px;
 }
 
-.banner-right img{
-width: 100%;
+.banner-right img {
+  width: 100%;
 }
 
+/* plant section style */
+.plants-section {
+  max-width: 1140px;
+  margin: auto;
+}
 
-/* responsive iphone 14 &15 pro */
+.plants-info {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-@media screen and (max-width:393px) {
-  nav ul li:nth-child(-n+3){
+.plant-card {
+  max-width: 270px;
+  text-align: center;
+}
+
+.card-info {
+  padding: 30px 0px
+}
+
+.card-btn {
+  background-color: #E95A08;
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.plants-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 30px;
+  place-items: center;
+}
+
+/* responsive mobile screen */
+
+@media screen and (max-width:576px) {
+  nav ul li:nth-child(-n+3) {
     display: none;
   }
-  nav{
+  nav {
     padding: 0 15px;
   }
-
-  .banner{
-        flex-direction: column-reverse;
-          margin-top: 28px;
+  .banner {
+  flex-direction: column-reverse;
+  margin-top: 28px;
+  margin-bottom: 65px;
   }
-  .banner-left{
+  .banner-left, .plants-info {
     padding: 28px 15px;
   }
-  .banner-left h2{
+  /* .banner-left h2, .plants-info h2 {
     font-size: 24px;
   }
-
-  .banner-left p{
-   font-size: 14px;
+  .banner-left p, .plants-info p {
+    font-size: 14px;
+  } */
+  .plants-cards{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
