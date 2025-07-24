@@ -157,50 +157,54 @@ nav ul li:last-child a {
 }
 
 /* Latest Deal Section */
-.latest-deal{
+.latest-deal {
   max-width: 1140px;
   margin: auto;
   margin-top: 135px;
 }
-.latest-deal-info{
-text-align: center;
+
+.latest-deal-info {
+  text-align: center;
 }
-.latest-deal-imgs{
+
+.latest-deal-imgs {
   display: flex;
   gap: 25px;
   margin-top: 120px;
 }
 
-.latest-deal-img-row img{
-height: 100%;
-width: 100%;
-border-radius: 25px;
-filter: brightness(60%);
+.latest-deal-img-row img {
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  filter: brightness(60%);
   display: block;
 }
-.latest-deal-img-row{
+
+.latest-deal-img-row {
   display: grid;
-    place-items: center;
-    position: relative;
+  place-items: center;
+  position: relative;
 }
 
-.latest-deal-left-img{
+.latest-deal-left-img {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.latest-deal-right-img{
-display: grid;
+.latest-deal-right-img {
+  display: grid;
   place-items: center;
   position: relative;
 }
-.latest-deal-right-img img{
-width: 100%;
-height: 100%;
-border-radius: 25px;
-filter: brightness(50%);
-display: block;
+
+.latest-deal-right-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  filter: brightness(50%);
+  display: block;
 }
 
 .latest-deal-left-text {
@@ -211,7 +215,8 @@ display: block;
   position: absolute;
   text-align: center;
 }
-.latest-deal-right-text{
+
+.latest-deal-right-text {
   font-size: 50px;
   font-family: "Noto Serif", serif;
   font-weight: 700;
@@ -220,6 +225,92 @@ display: block;
   text-align: center;
 }
 
+/* join-section */
+.join-section {
+  position: relative;
+  /* Make the section a positioning context */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+
+}
+
+.join-section img {
+  width: 100%;
+  height: auto;
+  filter: brightness(70%);
+  display: block;
+}
+
+.join-mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 830px;
+  text-align: center;
+}
+
+.join-section h2 {
+  color: white;
+
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-top: 30px;
+}
+
+#email {
+    flex: 1;
+      /* যত জায়গা আছে, নিয়ে নেবে */
+      min-width: 0px;
+  height: 50px;
+  background-color: white;
+  display: block;
+  padding: 10px 20px;
+}
+
+.sub-btn {
+  background-color: #E95A08;
+  padding: 14px 30px;
+  color: white;
+  border: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* footer section */
+
+footer {
+  max-width: 1140px;
+  margin: 50px auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.footer-first {
+  max-width: 360px;
+}
+
+.footer-second,
+.footer-third {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+}
+
+.footer-fourth {
+  display: flex;
+  gap: 25px;
+}
 
 /* responsive mobile screen */
 
@@ -253,6 +344,7 @@ display: block;
   .banner-left p, .plants-info p {
     font-size: 14px;
   } */
+
   .plants-cards {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
@@ -260,7 +352,10 @@ display: block;
     padding-right: 15px;
   }
 
-  .plants-lover, .latest-deal-imgs {
+  .plants-lover,
+  .latest-deal-imgs,
+  .latest-deal-info,
+  footer {
     flex-direction: column;
     padding: 0 15px;
   }
@@ -269,4 +364,26 @@ display: block;
     display: none;
   }
 
+  .latest-deal-right-text {
+    font-size: 20px;
+  }
+.join-section h2{
+  font-size: 20px;
+}
+  .join-mid {
+    width: 90%;
+  }
+
+.sub-btn{
+width: 30%;
+  text-align: center;
+}
+
+  .footer-fourth {
+    padding-top: 20px;
+  }
+
+  .footer-second {
+    padding: 20px 0;
+  }
 }
