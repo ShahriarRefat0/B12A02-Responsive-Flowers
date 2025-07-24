@@ -140,6 +140,16 @@ nav ul li:last-child a {
   width: 300px;
   top: -135px;
   left: 398px;
+  animation: spin 60s linear infinite;
+}
+
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
 
 .plants-lover-right {
@@ -228,12 +238,10 @@ nav ul li:last-child a {
 /* join-section */
 .join-section {
   position: relative;
-  /* Make the section a positioning context */
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 120px;
-
 }
 
 .join-section img {
@@ -266,9 +274,8 @@ nav ul li:last-child a {
 }
 
 #email {
-    flex: 1;
-      /* যত জায়গা আছে, নিয়ে নেবে */
-      min-width: 0px;
+  flex: 1;
+  min-width: 0px;
   height: 50px;
   background-color: white;
   display: block;
@@ -337,13 +344,6 @@ footer {
   .plants-section {
     margin-bottom: 41px;
   }
-
-  /* .banner-left h2, .plants-info h2 {
-    font-size: 24px;
-  }
-  .banner-left p, .plants-info p {
-    font-size: 14px;
-  } */
 
   .plants-cards {
     grid-template-columns: repeat(2, 1fr);
